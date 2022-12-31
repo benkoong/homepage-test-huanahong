@@ -1,0 +1,14 @@
+{% extends "layout.html" %} {% block content %}
+
+<h1>Hello Homepage</h1>
+<div class="container my-2">
+	<form action="" method="POST">
+		{{form.hidden_tag()}}{{form.name.label}} {{form.name()}}
+		<br />
+		{{form.submit()}}
+	</form>
+	<hr />
+
+	{% if name %} ชื่อของคุณ คือ {{name}} {% else %} ไม่พบข้อมูล {% endif %}
+</div>
+{% endblock %}
